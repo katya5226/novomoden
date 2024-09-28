@@ -1,0 +1,7 @@
+// order status:
+
+0 - placed&payed
+1 - sent
+2 - confirmed (goods received)
+3 - dispute opened  // not in use anymore
+4 - canceled (refund)

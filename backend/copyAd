@@ -1,0 +1,8 @@
+tfile1=$(mktemp ./uploads/croppedXXXXXXXXXXXXXXXX.jpg)
+tfile2=$(mktemp ./uploads/croppedXXXXXXXXXXXXXXXX.jpg)
+tfile3=$(mktemp ./uploads/croppedXXXXXXXXXXXXXXXX.jpg)
+cp ./uploads/cropped2315874898984380.jpg $tfile1
+cp ./uploads/cropped2315874898984381.jpg $tfile2
+cp ./uploads/cropped2315874898984382.jpg $tfile3
+mysql -u katja -ppejtu2Kurac. website -e "insert into listings set user_id = 85960683, username = 'Kiki', date_created = '2020-04-20 10:14:00', date_modified = '2020-04-20 10:14:00', status = 'active', category = 2, subcategory = 15, subcategory_name = 'Spodnje perilo', size = '3', material = '1', state = '1', brand = '', description = '', weight = 45.00, price = 4.00, photo1_url = '$tfile1', photo1_orig = '$tfile1', photo2_url = '$tfile2', photo2_orig = '$tfile2', photo3_url = '$tfile3', photo3_orig = '$tfile3'"
+

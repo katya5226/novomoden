@@ -1,0 +1,742 @@
+body, html{
+    height: 100%;
+    position: relative;
+    z-index: -2;
+    background-image: url("retro_darker.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.App {
+    max-width: 100vw;
+    text-align: center;
+}
+
+.App p {
+    font-family:  -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+/*background-color: #282c34;*/
+
+.App-header {
+    padding-top: 20px;
+    height: 10vh;
+    text-align: left;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    opacity: 0.8;
+}
+
+.App-header img {
+    margin-left: 35px;
+    max-height: 100%;
+    min-width: 30%;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.SignUp {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.Upper-line {
+    display: block;
+    margin-left: 10px;
+    text-align: right;
+    min-height: 3vh;
+    padding: 5px;
+}
+
+/*...........................................................................................................................*/
+#nav {
+    position:relative;
+    z-index:99;
+    width:100%;
+    margin:0 auto;
+    margin-top:0;
+    margin-bottom:0;
+    padding:0;
+    display:inline-block;
+    background-color:white;
+    opacity:0.9;
+    vertical-align:top;
+    border-bottom:1px solid #C2C2C2;
+  }
+  
+  ul#navigation {
+    margin:0px auto;
+    position:relative;
+    display:inline-block;
+    vertical-align:top;
+    padding:0;
+  }
+  
+  ul#navigation li {
+    display:inline;
+    font-size:medium;
+    font-weight:bold;
+    margin:0;
+    padding:0;
+    position:relative;
+  }
+  
+  ul#navigation li a {
+    padding:10px 25px;
+    color:black;
+    font-weight:lighter;
+    font-size:medium;
+    text-shadow:0.5px 0.5px 0px #616161;
+    text-decoration:none;
+    display:inline-block;
+    border-right:1px solid #C2C2C2;
+    border-left:1px solid #C2C2C2;
+    background: white;
+  
+    -webkit-transition:color 0.2s linear, background 0.2s linear;
+    -moz-transition:color 0.2s linear, background 0.2s linear;
+    -o-transition:color 0.2s linear, background 0.2s linear;
+    transition:color 0.2s linear, background 0.2s linear;
+  }
+
+  ul#navigation li a:hover {
+    background:#525050;
+    color:#282828;
+}
+ 
+ul#navigation li a.first {
+    /*border-left: 0 none;*/
+    border-left:2px solid #C2C2C2;
+    /*background:#525050*/
+}
+ 
+ul#navigation li a.last {
+    border-right:2px solid #C2C2C2;
+}
+
+ 
+ul#navigation li:hover > a {
+    background:#525050;
+    color:#fff;
+}
+
+/* Drop-Down Navigation */
+ul#navigation li:hover > ul
+{
+/*these 2 styles are very important,
+being the ones which make the drop-down to appear on hover */
+    visibility:visible;
+    opacity:1;
+}
+ 
+ul#navigation ul, ul#navigation ul li ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+/*the next 2 styles are very important,
+being the ones which make the drop-down to stay hidden */
+    visibility:hidden;
+    opacity:0;
+    position: absolute;
+    z-index: 1000;
+    width:220px;
+    background:#f8f8f8;
+    box-shadow:1px 1px 3px #ccc;
+/* css3 transitions for smooth hover effect */
+    -webkit-transition:opacity 0.2s linear, visibility 0.2s linear;
+    -moz-transition:opacity 0.2s linear, visibility 0.2s linear;
+    -o-transition:opacity 0.2s linear, visibility 0.2s linear;
+    transition:opacity 0.2s linear, visibility 0.2s linear;
+}
+ 
+ul#navigation ul {
+    top: 30px;
+    left: 1px;
+}
+ 
+ul#navigation ul li ul {
+    top: 0;
+    left: 221px; /* strong related to width:180px; from above */
+}
+ 
+ul#navigation ul li {
+    clear:both;
+    width:100%;
+    border:0 none;
+    border-bottom:1px solid #c9c9c9;
+    position:relative;
+    z-index: 1000;
+}
+ 
+ul#navigation ul li a {
+    background:none;
+    padding:7px 15px;
+    color:#616161;
+    font-size:small;
+    /*text-shadow:0.5px 0.5px 0px #c9c9c9;*/
+    text-shadow:none;
+    text-decoration:none;
+    /*display:inline-block;*/
+    border:0 none;
+    float:left;
+    clear:both;
+    width:189px;
+}
+
+/*......................................................................................*/
+
+  /* Container needed to position the button. Adjust the width as needed */
+.container {
+    min-height: 70vh;
+  }
+  
+  /* Make the image responsive */
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Style the button and place it in the middle of the container/image */
+  .container .btn {
+    position: absolute;
+    bottom: 0.5px;
+    left: 0.5px;
+    /*transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);*/
+    background-color: rgba(85, 85, 85, 0);
+    color: white;
+    font-size: x-large;
+    padding: 12px 24px;
+    border: 2px solid black;
+    cursor: pointer;
+  }
+  
+  .container .btn:hover {
+    background-color: black;
+  }
+
+  .Ad-space {
+      min-height: 30vh;
+      opacity: 0.5;
+      clear: both;
+  }
+
+  /* Bottom styling */
+
+  .ContactDiv-container {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    clear: both;
+    min-height: 200px;
+    background-color: #282c34;
+    color: white;
+    opacity: 0.5;
+    padding-top: 10px;
+}
+
+.ContactDiv-container ul {
+    text-align: justify;
+    list-style-type: none;
+    padding-inline-start: 25px;
+}
+
+.ContactDiv-container li {
+    display: inline-flex;
+    width: 33%;
+}
+
+.ContactDiv-container ul:after {
+    content: '';
+    width: 100%; /* Ensures justification for single lines */
+    display: inline-block;
+  }
+
+  .ContactDiv-container ul li ul li{
+    display: block;
+    width: 100%;
+    font-size: small;
+    line-height: 20px;
+}
+
+.ContactDiv-container ul li ul li#fb {
+    font-size: large;
+}
+
+.Link {
+    text-decoration: none;
+    color: white;
+}
+
+  /* End of Bottom styling */
+
+  /* The sidebar menu */
+.sidenav {
+    min-height: 100vw;
+    min-width: 10vw;
+    position: relative;
+    float: left;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding: 20px;
+  }
+.sidenav ul {
+    list-style-type: none;
+    text-align: left;
+    padding-left: 15px;
+}
+ul#categoryNav a {
+    font-size: medium;
+}
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-align: left;
+    text-decoration: none;
+    font-size: large;
+    display: block;
+  }
+
+  .activeStyle {
+    padding: 12px 24px 12px 24px;
+    text-decoration: none;
+    font-size: medium;
+    color:white;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0);
+    display: block;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nonActive {
+    padding: 12px 24px 12px 24px;
+    text-decoration: none;
+    font-size: medium;
+    color: rgb(255, 255, 255, 0.6);
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Style page content */
+  .main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: large;}
+  }
+
+  .row {
+    display: -webkit-flex;
+    display: flex;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  
+  /* Create three equal columns that sits next to each other */
+  .column {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 10px;
+  }
+
+  select {
+    background-color: rgb(255, 255, 255, 0.7);
+  }
+
+  input {
+    width: 100%;
+    min-height: 40px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    text-align: left;
+    font-size: medium;
+    resize: none;
+    margin-top: 5px;
+    font-family:  -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+
+  #country, #nationality {
+    width: 50%;
+    min-height: 40px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    text-align: left;
+    font-size: medium;
+    resize: none;
+    margin-top: 5px;
+    font-family:  -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+
+  #day, #month, #year {
+    width: 33.3%;
+    min-height: 40px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    text-align: left;
+    font-size: medium;
+    resize: none;
+    margin-top: 5px;
+    font-family:  -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+
+  #day option, #month option, #year option {
+    color:black;
+  }
+
+  #day option:first-child, #month option:first-child, #year option:first-child {
+    color:gray;
+  }
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family:  -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-family:  -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    font-family:  -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    font-family:  -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 215px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: medium;
+    resize: none;
+    font-family:  -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;  
+  }
+
+  .chosen_photos {
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    width: 500px;
+  }
+
+  .save_button {
+      padding-top: 10vw;
+      padding-bottom: 10vw;
+      display: flex;
+      justify-content: center;
+  }
+
+  .btn {
+    background-color: white;
+    border: 2px solid white;
+    opacity: 0.8;
+    color: black;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: medium;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-family:  -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+
+  .btnb {
+    position: inherit;
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0, 0.8);
+    opacity: 0.8;
+    color: black;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: medium;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-family:  -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+
+  .btnx {
+    position: relative;
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0, 0.8);
+    opacity: 0.8;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: medium;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-family:  -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+
+  .btn_nopad {
+    background-color: rgb(255, 255, 255, 0.6);
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    color: black;
+    padding: 2px;
+    padding-top: 0.5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: medium;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-family:  -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+
+  .btn_marg {
+    margin-left: 10px;
+  }
+
+  .btn_red {
+    background-color: rgb(255, 0, 0, 0.5);
+  }
+
+  .btn_green {
+    background-color: rgb(0, 128, 0, 0.5);
+  }
+
+  .btn_yellow {
+    background-color: rgb(255, 255, 0, 0.5);
+  }
+
+  .btn_lightyellow {
+    background-color: rgb(255, 255, 0, 0.2);
+  }
+
+  .btn_blue {
+    background-color: rgb(0, 128, 255, 0.5);
+  }
+
+
+  .btn_nocursor {
+    cursor: auto;
+  }
+
+  .btnu {
+    border: none;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: small;
+    background-color: rgb(255, 255, 255, 0);
+    color: black;
+    cursor: pointer;
+    padding: 5;
+  }
+
+  .support_btn {
+    position: inherit;
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0, 0.8);
+    opacity: 0.8;
+    color: black;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-size: medium;
+    border-radius: 0px;
+    cursor: pointer;
+    font-family:  -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+
+  .imgWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap: 10px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .imgWrapper li {
+      list-style-type: none;
+      width: 300px;
+      height: 500px;
+      border: 2px solid black;
+  }
+
+  .userContainer {
+    text-align: left;
+    min-width: 70vw;
+    position: relative;
+    float: right;
+    padding-right: 10vw;
+  }
+
+  .profile {
+    text-align: left;
+    max-width: 100%;
+    position: relative;
+    margin-top: 4vh;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .listingWrapper {
+    text-align: left;
+    width: 100%;
+    position: relative;
+  }
+
+  .listingWrapper li {
+    list-style-type: none;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    max-width: 100%;
+    padding: 20px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.8);  
+  }
+
+  .listingDesc {
+      position: absolute;
+      left: 800px;
+  }
+
+  .userPage {
+      display: flex;
+  }
+
+  .orderListWrapper {
+    text-align: left;
+    width: 100%;
+    position: relative;
+}
+
+.orderListWrapper li {
+    list-style-type: none;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);  
+    max-width: 100%;
+    padding: 20px;
+    min-height: 60px;
+}
+
+  /*....................................................................................*/
+  .imgSlider {
+    width:60%;
+    float:left;
+  }
+
+  .imgSlider img {
+    pointer-events:all;
+    width:25%;
+    margin:20px;
+    border:2px solid white;
+  }
+
+  .itemDesc {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    margin-top: 30px;
+    max-width: 100%;
+    min-height: 700px;
+    background-color: rgb(255, 255, 255, 0.8);
+  }
+
+  .description {
+    text-align: left;
+    margin-top: 0px;
+    width: 40%;
+    float: right;
+    max-height: 100%;
+    font-size: medium;
+  }
+
+  .red {
+      border-color: red;
+  }
+  .white-back {
+    background-color: rgb(255,255,255,0.5)
+  }
+
+
+.finishorderdata {
+    text-align: left;
+}
